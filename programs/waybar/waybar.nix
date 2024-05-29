@@ -21,7 +21,6 @@ settings.mainBar = {
     	"tray"
         "pulseaudio" 
         "battery"
-        "network"
         "clock#date"
         "clock#time"
     ];
@@ -56,16 +55,8 @@ settings.mainBar = {
             "6"= [];
         };
     };
-    network = {
-        format-wifi = "  {signalStrength}%";
-        format-ethernet = "󰀂 ";
-        tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
-        format-linked = "{ifname} (No IP)";
-        format-disconnected = "󰖪  ";
-	on-click= "nm-applet --indicator ";
-    };
     tray= {
-        icon-size= 20;
+        icon-size= 25;
         spacing= 4;
     };
     pulseaudio= {

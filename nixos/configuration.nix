@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./colors.nix
+      ../theme/colors.nix
     ];
 
   # Bootloader.
@@ -43,15 +43,15 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [ zsh ];
-  programs.zsh.enable = true;
 
-  # Enable the GNOME Desktop Environment.
+# Setting ZSH as default shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
+  # Enable the Display Manager.
   services.xserver.displayManager.gdm = {
         enable = true;
       };
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -60,6 +60,9 @@
     xkb.variant = "";
   };
 
+
+
+# Nvidia stuff
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
@@ -73,9 +76,12 @@
     driSupport = true;
     driSupport32Bit = true;
   };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.dbus.enable = true;
+  
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -106,21 +112,22 @@
     ];
   };
 
-  # Install firefox.
-
+# Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-services.blueman.enable = true;
+  services.blueman.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
+# Hyprland
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
-
+# Fonts install
 fonts.packages = with pkgs; [
   (nerdfonts.override { fonts = [ "FiraCode" "Meslo"]; })
 ];
@@ -135,7 +142,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   dbus
   ];
 
-
+# Garbage collection
   nix.gc = {
     automatic = true;
     dates = "weekly";

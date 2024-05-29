@@ -5,5 +5,7 @@
     ./hypr/hyprpaper.nix
     ./wezterm/wezterm.nix
     ./firefox/firefox.nix
+    ./zsh
+    ./fastfetch/fastfetch.nix
 ];
 }

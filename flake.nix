@@ -15,7 +15,7 @@
     nixosConfigurations.yahias = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./configuration.nix   
+        ./nixos/configuration.nix   
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
           {

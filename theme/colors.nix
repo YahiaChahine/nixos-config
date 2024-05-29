@@ -43,7 +43,5 @@
         };
     };
 
-    stylix.cursor.package = pkgs.bibata-cursors;
-    stylix.cursor.name = "Bibata-Modern-Ice";
-    stylix.image = ./Fantasy-Autumn.png;
+    stylix.image = ../wallpapers/Fantasy-Autumn.png;
 }

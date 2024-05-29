@@ -21,7 +21,7 @@ programs.wezterm = {
             -- For example, changing the color scheme:
             -- config.color_scheme = 'Batman'
 
-            config.window_background_opacity = 1
+            config.window_background_opacity = 1 
 
             -- default is true, has more "native" look
             config.use_fancy_tab_bar = false
