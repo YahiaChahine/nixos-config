@@ -83,7 +83,7 @@
         [
           "$mainMod, F, exec, firefox"
           "$mainMod, Return, exec, wezterm"
-    	  "$mainMod, V, exec, code"
+    	  "$mainMod, Z, exec, zed"
           "$mainMod, R, exec, rofi -show drun -show-icons"
           "$mainMod, S, exec, tofi-run | xargs hyprctl dispatch exec --  "
           "$mainMod, Q, killactive,"
@@ -95,10 +95,10 @@
         ", SHIFT S, exec, grimblast --notify --cursor  copy area"
 
         # switch focus
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, H, movefocus, l"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, K, movefocus, u"
+        "$mainMod, J, movefocus, d"
 
         # switch workspace
         "$mainMod, 1, workspace, 1"

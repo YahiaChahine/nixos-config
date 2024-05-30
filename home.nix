@@ -27,7 +27,7 @@ home.packages = with pkgs; [
   grimblast
   neovim
   zed-editor
-  lua-language-server
+  mysql80
 ];
 
 services.mako.enable = true;
