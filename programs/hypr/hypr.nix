@@ -76,6 +76,8 @@
         
 	"nm-applet &"
 	"waybar &"
+    "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland &"
+    "hyprctl setcursor Bibata-Modern-Ice  &"
 	"mako"
       ];
       "$mainMod" = "SUPER";

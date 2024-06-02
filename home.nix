@@ -27,7 +27,7 @@ home.packages = with pkgs; [
   grimblast
   neovim
   zed-editor
-  mysql80
+  cura
 ];
 
 services.mako.enable = true;

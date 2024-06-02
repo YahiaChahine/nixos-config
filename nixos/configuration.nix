@@ -48,6 +48,11 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
+
+# mysql server
+services.mysql.package = pkgs.mysql80 ;
+services.mysql.enable = true;
+
   # Enable the Display Manager.
   services.xserver.displayManager.gdm = {
         enable = true;
@@ -131,7 +136,6 @@
 fonts.packages = with pkgs; [
   (nerdfonts.override { fonts = [ "FiraCode" "Meslo"]; })
 ];
-
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
