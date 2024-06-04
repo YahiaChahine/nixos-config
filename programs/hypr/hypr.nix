@@ -12,9 +12,9 @@
     settings = {
       general = {
 	layout = "dwindle";
-        gaps_in = 2;
-        gaps_out = 2;
-        border_size = 2;
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 5;
       };
             decoration = {
         rounding = 0;
@@ -77,7 +77,7 @@
 	"nm-applet &"
 	"waybar &"
     "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland &"
-    "hyprctl setcursor Bibata-Modern-Ice  &"
+    "hyprctl setcursor Bibata-Modern-Ice 20 &"
 	"mako"
       ];
       "$mainMod" = "SUPER";

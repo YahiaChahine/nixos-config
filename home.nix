@@ -28,7 +28,8 @@ home.packages = with pkgs; [
   neovim
   zed-editor
   cura
-];
+  slack
+  ];
 
 services.mako.enable = true;
 

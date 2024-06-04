@@ -7,6 +7,7 @@ gtk.iconTheme.name = "rose-pine";
     gtk.enable = true;
     package = lib.mkForce pkgs.bibata-cursors;
     name = lib.mkForce "Bibata-Modern-Ice";
+    size = lib.mkForce 20;
   };
 
 }
