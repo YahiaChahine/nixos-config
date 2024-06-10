@@ -14,7 +14,7 @@
 	layout = "dwindle";
         gaps_in = 5;
         gaps_out = 5;
-        border_size = 5;
+        border_size = 2;
       };
             decoration = {
         rounding = 0;
@@ -90,6 +90,7 @@
           "$mainMod, S, exec, tofi-run | xargs hyprctl dispatch exec --  "
           "$mainMod, Q, killactive,"
           "$mainMod, E, exec, thunar"
+          "$mainMod, C, exec, slack "
           "$mainMod, P, exec, wlogout "
 	  
         # screenshot

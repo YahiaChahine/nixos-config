@@ -42,10 +42,14 @@
         # Valid strings for installation_mode are "allowed", "blocked",
         # "force_installed" and "normal_installed".
         ExtensionSettings = {
-          "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          "*".installation_mode = "allowed"; # blocks all addons except the ones specified below
           # uBlock Origin:
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          "{84601290-bec9-494a-b11c-1baa897a9683}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/4192880/ctrl_number_to_switch_tabs-1.0.2.xpi";
             installation_mode = "force_installed";
           };
         };

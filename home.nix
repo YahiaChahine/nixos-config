@@ -28,7 +28,9 @@ home.packages = with pkgs; [
   neovim
   zed-editor
   cura
+  chromium
   slack
+  node2nix
   ];
 
 services.mako.enable = true;
